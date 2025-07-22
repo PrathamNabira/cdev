@@ -1,29 +1,37 @@
 #include <iostream>
 
-class entity{
+class Entity{
   public:
     int x;
-    void print(){
+    void print() const {
       std::cout<<"hello"<<std::endl;
     }
 };
 class scopedptr{
   private:
-    entity* m_obj;
+    Entity* m_obj;
   public:
-    scopedptr(entity* entity):m_obj(entity){};
+    scopedptr(Entity* entity):m_obj(entity){};
 
     ~scopedptr(){
       delete m_obj;
     }
+    Entity* operator->(){
+      return m_obj;
+    }
+    const Entity* operator->()const{
+      return m_obj;
+    }
 };
 int main(){
-  entity e;
+  Entity e;
   e.print();
-  entity* ptr = &e;
-  // entity& entity = *ptr;
-  // entity.print();
+  Entity* ptr = &e;
+  // Entity& entity = *ptr;
+  // Entity.print();
   // (*ptr).print();
   ptr->print();
   ptr->x=2;
+  const scopedptr entity = new Entity();
+  entity->print();//(entity.operator->())->print();
 }
