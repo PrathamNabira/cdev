@@ -7,6 +7,7 @@ class Entity{
       std::cout<<"hello"<<std::endl;
     }
 };
+
 class scopedptr{
   private:
     Entity* m_obj;
@@ -23,6 +24,7 @@ class scopedptr{
       return m_obj;
     }
 };
+
 int main(){
   Entity e;
   e.print();
