@@ -8,6 +8,7 @@ class entity{
       std::cout<<"entity distructed"<<std::endl;
     }
 };
+
 class scopedptr{
   private:
     entity* m_ptr;
@@ -17,6 +18,7 @@ class scopedptr{
       delete m_ptr;
     }
 };
+
 int main(){
   {
     entity* e = new entity();
