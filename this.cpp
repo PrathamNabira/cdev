@@ -8,10 +8,12 @@ class entity{
       (*this).y=y;
     }
 };
+
 std::ostream& operator<<(std::ostream& stream , entity& e){
   std::cout<<e.x<<", "<<e.y;
   return stream;
 }
+
 int main(){
   entity e(1,2);
   std::cout<<e<<std::endl;
