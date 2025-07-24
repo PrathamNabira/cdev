@@ -1,5 +1,6 @@
 #include <iostream>
 extern int s_variable;
+
 extern void function();
 int main(){
   function();
