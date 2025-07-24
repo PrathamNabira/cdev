@@ -26,6 +26,7 @@ class log{
       }
     }
 };
+
 int main(){
   log log;
   log.setlevel(log::en_info);
