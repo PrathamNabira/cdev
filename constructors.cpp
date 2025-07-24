@@ -12,10 +12,12 @@ class entity{
       std::cout<<x<<", "<<y<<std::endl;
     }
 };
+
 void function(){
   entity e(2,5);
   e.print();
 }
+
 int main(){
   function();
 }
