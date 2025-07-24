@@ -34,10 +34,12 @@ class string{
     friend std::ostream& operator<<(std::ostream& stream, const string& string)
 ;
 };
+
 std::ostream& operator<<(std::ostream& stream, const string& string){
   stream<<string.m_buffer;
   return stream;
 }
+
 int main(){
   string String = "pratham";
   string second = String;
