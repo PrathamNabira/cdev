@@ -9,6 +9,7 @@ class example{
       std::cout<<"example created with "<< x <<'!'<<std::endl;
     }
 };
+
 class entity{
   private:
     std::string m_name;
@@ -21,6 +22,7 @@ class entity{
     }
     const std::string& getname(){return m_name;}
 };
+
 int main(){
   entity e0(8);
   std::cout<<e0.getname()<<std::endl; 
